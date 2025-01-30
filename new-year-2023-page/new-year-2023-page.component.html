@@ -1,0 +1,160 @@
+<ng-container *fxRestriction="{ enabledRegulators: [Regulators.FSCM, Regulators.Global, Regulators.KNN]}">
+  <ng-container *ngTemplateOutlet="swiper; context:{isRestrictedByRegulator:'false'}"></ng-container>
+</ng-container>
+
+
+<ng-container *fxRestriction="{ disabledRegulators: [Regulators.FSCM, Regulators.Global, Regulators.KNN]}">
+  <ng-container *ngTemplateOutlet="swiper; context:{isRestrictedByRegulator:'true'}"></ng-container>
+</ng-container>
+
+<ng-template #swiper
+             let-isRestrictedByRegulator="isRestrictedByRegulator">
+  <div *ngIf="config"
+       class="swiper-container"
+       [ngClass]="{'animate': animateSwiper}"
+       [swiper]="config">
+    <div class="swiper-wrapper">
+      <ng-container>
+        <section class="swiper-slide slide slide_01">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide01"></ng-container>
+        </section>
+        <section class="swiper-slide slide slide_02">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide02"></ng-container>
+        </section>
+        <!-- slides #3-4 are shown only for FSCM(Global)/SCB/KNN -->
+        <ng-container *ngIf="isRestrictedByRegulator === 'false'">
+          <section class="swiper-slide slide slide_03">
+            <ng-container *ngTemplateOutlet="lines"></ng-container>
+            <ng-container *ngTemplateOutlet="slide03"></ng-container>
+          </section>
+          <section class="swiper-slide slide slide_04">
+            <ng-container *ngTemplateOutlet="lines"></ng-container>
+            <ng-container *ngTemplateOutlet="slide04"></ng-container>
+          </section>
+        </ng-container>
+        <section class="swiper-slide slide slide_05">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide05"></ng-container>
+        </section>
+        <section class="swiper-slide slide slide_06">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide06"></ng-container>
+        </section>
+        <section class="swiper-slide slide slide_07">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide07"></ng-container>
+        </section>
+        <section class="swiper-slide slide slide_08">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide08"></ng-container>
+        </section>
+        <section class="swiper-slide slide slide_09">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide09"></ng-container>
+        </section>
+        <!-- slide #10 is shown only for FSCM(Global)/SCB/KNN -->
+        <ng-container *ngIf="isRestrictedByRegulator === 'false'">
+          <section class="swiper-slide slide slide_10">
+            <ng-container *ngTemplateOutlet="lines"></ng-container>
+            <ng-container *ngTemplateOutlet="slide10"></ng-container>
+          </section>
+        </ng-container>
+        <section class="swiper-slide slide slide_11">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide11"></ng-container>
+        </section>
+        <section class="swiper-slide slide slide_12">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide12"></ng-container>
+        </section>
+        <section class="swiper-slide slide slide_13">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide13"></ng-container>
+        </section>
+        <section class="swiper-slide slide slide_14">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide14"></ng-container>
+        </section>
+        <section *ngIf="!isDesktop"
+                 class="swiper-slide slide slide_15">
+          <ng-container *ngTemplateOutlet="lines"></ng-container>
+          <ng-container *ngTemplateOutlet="slide15"></ng-container>
+        </section>
+      </ng-container>
+    </div>
+  </div>
+</ng-template>
+
+
+<ng-template #slide01>
+  <section-new-year-2023-1></section-new-year-2023-1>
+</ng-template>
+
+<ng-template #slide02>
+  <section-new-year-2023-2></section-new-year-2023-2>
+</ng-template>
+
+<ng-template #slide03>
+  <section-new-year-2023-3></section-new-year-2023-3>
+</ng-template>
+
+<ng-template #slide04>
+  <section-new-year-2023-4></section-new-year-2023-4>
+</ng-template>
+
+<ng-template #slide05>
+  <section-new-year-2023-5></section-new-year-2023-5>
+</ng-template>
+
+<ng-template #slide06>
+  <section-new-year-2023-6></section-new-year-2023-6>
+</ng-template>
+
+<ng-template #slide07>
+  <section-new-year-2023-7></section-new-year-2023-7>
+</ng-template>
+
+<ng-template #slide08>
+  <section-new-year-2023-8></section-new-year-2023-8>
+</ng-template>
+
+<ng-template #slide09>
+  <section-new-year-2023-9></section-new-year-2023-9>
+</ng-template>
+
+<ng-template #slide10>
+  <section-new-year-2023-10></section-new-year-2023-10>
+</ng-template>
+
+<ng-template #slide11>
+  <section-new-year-2023-11></section-new-year-2023-11>
+</ng-template>
+
+<ng-template #slide12>
+  <section-new-year-2023-12></section-new-year-2023-12>
+</ng-template>
+
+<ng-template #slide13>
+  <section-new-year-2023-13></section-new-year-2023-13>
+</ng-template>
+
+<ng-template #slide14>
+  <section-new-year-2023-14></section-new-year-2023-14>
+</ng-template>
+
+<ng-template #slide15>
+  <section-new-year-2023-15></section-new-year-2023-15>
+</ng-template>
+
+<ng-template #lines>
+  <div class="lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</ng-template>

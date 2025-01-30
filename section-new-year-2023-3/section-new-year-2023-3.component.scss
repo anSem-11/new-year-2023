@@ -1,0 +1,193 @@
+@import "fx-utilities";
+
+::ng-deep {
+  .swiper-slide.slide.swiper-slide-active {
+    .section-new-year-2023-3 {
+      #new-year-2023-slide-3 {
+        transform: rotate(0) !important;
+      }
+
+      .background {
+        &__mobile {
+          transform: translate(-50%, -50%) rotate(0) !important;
+
+          @media (max-width: 720px) {
+            transform: translate(-52%, -60%) rotate(0) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-new-year-2023-3 {
+  padding: 40px;
+  height: 100dvh;
+  width: 100vw;
+  background: #FEFAFA;
+
+  @media (max-width: 720px) {
+    padding: 10px 10px 40px;
+  }
+
+  @media (max-width: 389px) {
+    padding: 10px;
+  }
+
+  .background {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: auto;
+    mix-blend-mode: multiply;
+
+    @media (min-width: 1500px) {
+      width: 65%;
+    }
+
+    @media (max-width: 720px) {
+      transform: translate(-49%, -60%);
+      width: 100%;
+    }
+
+    @media (max-width: 520px) {
+      transform: translate(-49%, -70%);
+    }
+
+    @media (max-width: 480px) {
+      width: 150%;
+    }
+
+    &__mobile {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+      transition: transform 0.3s;
+      width: 100%;
+      height: 60dvh;
+      mix-blend-mode: multiply;
+      background: center / contain no-repeat url('https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide1/slide-3-bg-mob.webp');
+
+      @media (max-width: 720px) {
+        transform: translate(-52%, -60%) rotate(-30deg);
+      }
+
+      @media (max-width: 420px) {
+        width: 90%;
+      }
+
+      @media (max-width: 389px) {
+        width: 80%;
+      }
+    }
+
+    #new-year-2023-slide-3 {
+      outline: none;
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+      transform: rotate(-30deg);
+      transition: transform 0.3s;
+    }
+  }
+
+  .section-3 {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    &__description {
+      margin: 0 auto;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 30px;
+      color: #000;
+
+      @media (max-width: 520px) {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+
+      &_left {
+        flex: 1 1 50%;
+        max-width: 30.3vw;
+        font: 500 14px/150% $font-family-inter;
+        letter-spacing: -0.28px;
+
+        @media (max-width: 720px) {
+          max-width: 291px;
+          font: 500 14px/150% $font-family-inter;
+        }
+
+        @media (max-width: 389px) {
+          margin: 0 auto 0 0;
+          max-width: 248px;
+          font: 500 12px/150% $font-family-inter;
+          letter-spacing: -0.24px;
+        }
+      }
+
+      &_right {
+        margin: 20px 0 0;
+        position: relative;
+        z-index: 5;
+        flex: 1 1 50%;
+        max-width: 387px;
+        font: 300 26px/120% $font-family-inter;
+
+        @media (max-width: 720px) {
+          margin: 0 0 0 auto;
+          max-width: 291px;
+        }
+
+        @media (max-width: 389px) {
+          max-width: 248px;
+          font: 300 20px/120% $font-family-inter;
+        }
+      }
+    }
+
+    &__header {
+      margin: 0 auto;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__title {
+      margin: 0;
+      font: 600 40px/100% $font-family-inter;
+      letter-spacing: -1.2px;
+      text-align: left;
+      max-width: 334px;
+      color: #000;
+
+      @media (max-width: 720px) {
+        max-width: 249px;
+      }
+
+      @media (max-width: 389px) {
+        font: 600 25px/100% $font-family-inter;
+        max-width: 150px;
+      }
+    }
+
+    &__logo {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

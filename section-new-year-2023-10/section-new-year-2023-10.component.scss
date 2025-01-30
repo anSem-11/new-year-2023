@@ -1,0 +1,306 @@
+@import "fx-utilities";
+
+::ng-deep {
+  .swiper-slide.slide.swiper-slide-active {
+    .section-new-year-2023-10 {
+
+      .section-10 {
+        &__arabicpromo {
+          bottom: 20px;
+          opacity: 1;
+        }
+
+        &__promoasia {
+          bottom: 0;
+          opacity: 1;
+        }
+
+        &__luckydraw {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.section-new-year-2023-10 {
+  height: 100dvh;
+  width: 100vw;
+  padding: 40px 40px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .section-10 {
+
+    &__header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+      z-index: 3;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font: 600 40px/40px $font-family-inter;
+      letter-spacing: -0.03em;
+      text-align: left;
+      max-width: 285px;
+      color: #000000;
+      margin: 0;
+
+      @media (max-width: 720px) {
+        max-width: 250px;
+      }
+
+      @media (max-width: 389px) {
+        max-width: 200px;
+        font: 600 25px/100% $font-family-inter;
+      }
+    }
+
+    &__logo,
+    &__logo-img {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__screenshots {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 996px;
+      width: 100%;
+
+      @media (min-width: 1500px) {
+        max-width: 1300px;
+      }
+
+      &-mob {
+        display: none;
+      }
+
+      img {
+        width: 386px;
+        position: absolute;
+
+        @media (min-width: 1500px) {
+          transform: scale(1.5);
+        }
+
+        @media (min-width: 2000px) {
+          transform: scale(1.9);
+        }
+      }
+    }
+
+    &__arabicpromo {
+      bottom: -500px;
+      opacity: 0;
+      left: 0;
+      transition: bottom 0.3s;
+    }
+
+    &__promoasia {
+      bottom: -500px;
+      opacity: 0;
+      right: 0;
+      transition: bottom 0.4s;
+    }
+
+    &__luckydraw {
+      bottom: -500px;
+      opacity: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.5s;
+
+      @media (min-width: 1500px) {
+        left: 35%;
+      }
+    }
+
+    &__wrapper {
+      max-width: 680px;
+      width: 100%;
+      height: 247px;
+      background-color: #FFFFFFF2;
+      border: 0.5px solid #CECECE;
+      backdrop-filter: blur(10px);
+      margin: 0 auto;
+      padding: 50px 45px 60px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2.1vw;
+
+      @media (max-width: 1024px) {
+        gap: 3.56vw;
+      }
+
+      @media (max-width: 500px) {
+        height: unset;
+      }
+    }
+
+    &__info {
+      font: 500 14px/21px $font-family-inter;
+      letter-spacing: -0.02em;
+      text-align: right;
+      max-width: 285px;
+      flex: 1 1 50%;
+
+      @media (max-width: 389px) {
+        font: 500 12px/150% $font-family-inter;
+      }
+    }
+
+    &__description {
+      font: 400 20px/24px $font-family-inter;
+      letter-spacing: -0.02em;
+      text-align: left;
+      max-width: 285px;
+      align-self: flex-end;
+      flex: 1 1 50%;
+
+      @media (max-width: 389px) {
+        font: 500 16px/120% $font-family-inter;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-new-year-2023-10 {
+    padding: 0px;
+
+    .section-10 {
+      &__header {
+        padding: 10px 10px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section-new-year-2023-10 {
+    padding: 0px;
+
+    .section-10 {
+      &__screenshots {
+
+        &-desk {
+          display: none;
+        }
+
+        &-mob {
+          display: block;
+        }
+      }
+
+      &__arabicpromo {
+        max-width: 170px;
+        bottom: 227px;
+      }
+
+      &__promoasia {
+        max-width: 160px;
+        bottom: 90px;
+      }
+
+      &__luckydraw {
+        max-width: 227px;
+        bottom: -50px;
+      }
+
+      &__wrapper {
+        max-width: 100%;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .section-new-year-2023-10 {
+    .section-10 {
+      &__arabicpromo {
+        max-width: 150px;
+      }
+
+      &__promoasia {
+        max-width: 140px;
+      }
+
+      &__luckydraw {
+        max-width: 210px;
+      }
+    }
+  }
+}
+
+@media only screen and (width: 393px) and (-webkit-device-pixel-ratio: 3) {
+  .section-new-year-2023-10 {
+    .section-10 {
+      &__arabicpromo {
+        max-width: 130px;
+      }
+
+      &__promoasia {
+        max-width: 120px;
+      }
+
+      &__luckydraw {
+        max-width: 190px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 389px) {
+  .section-new-year-2023-10 {
+    .section-10 {
+
+      &__arabicpromo,
+      &__promoasia {
+        max-width: 120px;
+      }
+
+      &__luckydraw {
+        max-width: 170px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .section-new-year-2023-10 {
+    .section-10 {
+
+      &__arabicpromo,
+      &__promoasia {
+        max-width: 100px;
+        bottom: 227px;
+      }
+
+      &__luckydraw {
+        max-width: 150px;
+        bottom: -50px;
+      }
+    }
+  }
+}

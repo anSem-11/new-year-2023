@@ -1,0 +1,32 @@
+<section class="section-new-year-2023-3">
+  <div class="background">
+    <canvas *ngIf="isDesktop"
+            id="new-year-2023-slide-3">
+    </canvas>
+    <div *ngIf="!isDesktop"
+         class="background__mobile">
+    </div>
+  </div>
+  <div class="section-3__content">
+    <div class="section-3__header">
+      <h2 class="section-3__title"
+          [fxTranslate]="'new_year_2023_text_7'">
+      </h2>
+      <a class="section-3__logo"
+         target="_blank"
+         mainWebsiteUrl>
+        <img src="https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/FxPro_Logo_Main_RedBG.svg"
+             alt="fxPro-logo"
+             class="section-3__logo-img">
+      </a>
+    </div>
+    <div class="section-3__description">
+      <div class="section-3__description_left"
+           [fxTranslate]="'new_year_2023_text_8'">
+      </div>
+      <div class="section-3__description_right"
+           [innerHtml]="'new_year_2023_text_9' | translate">
+      </div>
+    </div>
+  </div>
+</section>

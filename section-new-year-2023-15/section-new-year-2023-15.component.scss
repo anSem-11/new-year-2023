@@ -1,0 +1,37 @@
+@import "fx-utilities";
+
+::ng-deep {
+  .swiper-slide.slide.swiper-slide-active {
+    .section-new-year-2023-15 {
+      .footer-section {
+        margin: 20% 0 0;
+
+        .container {
+          margin: 0 auto;
+          padding: 0;
+        }
+
+        &.footer-frame,
+        .row {
+          margin: 0;
+          padding: 0;
+
+          @media (max-width: 480px) {
+            gap: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-new-year-2023-15 {
+  height: 100dvh;
+  width: 100vw;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  background-color: #C32420;
+  color: #FFF;
+}

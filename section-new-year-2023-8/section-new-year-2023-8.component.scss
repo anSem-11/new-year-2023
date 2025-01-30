@@ -1,0 +1,202 @@
+@import "fx-utilities";
+
+::ng-deep {
+  .swiper-slide.slide.swiper-slide-active {
+    .section-new-year-2023-8 {
+
+      .section-8__background {
+        top: 0;
+        width: 100vw;
+        height: 100dvh;
+
+        @media (max-width: 425px) {
+          left: 0;
+        }
+
+        &::after {
+          left: 100%;
+          width: 100vw;
+          height: 100vh;
+        }
+      }
+    }
+  }
+}
+
+.section-new-year-2023-8 {
+  height: 100dvh;
+  width: 100vw;
+  padding: 40px 40px 131px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .section-8 {
+
+    &__overlay {
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background-color:#00000032;
+      z-index:1;
+    }
+
+    &__background {
+      position: absolute;
+      top: -50px;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      background: center/cover no-repeat #0000004D url("https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide8/new-year-2023-promo-slide8-bg@3x.webp");
+      transition:
+        top 0.3s,
+        width 0.3s,
+        height 0.3s;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100dvh;
+        background: white;
+        z-index: 3;
+        transition:
+          left 0.3s,
+          width 0.3s,
+          height 0.3s;
+      }
+    }
+
+    &__header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin: 0 auto 24px;
+    }
+
+    &__title {
+      font: 600 40px/40px $font-family-inter;
+      letter-spacing: -0.03em;
+      text-align: left;
+      max-width: 488px;
+      color: #FFFFFF;
+      margin: 0;
+
+      @media (max-width: 720px) {
+        max-width: 255px;
+      }
+
+      @media (max-width: 389px) {
+        font: 600 25px/100% $font-family-inter;
+        max-width: 230px;
+      }
+    }
+
+    &__logo,
+    &__logo-img {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__description {
+      display: flex;
+      justify-content: space-between;
+      gap: 2.1vw;
+      align-items: top;
+      width: 100%;
+      flex-grow: 1;
+
+      @media (max-width: 1024px) {
+        gap: 3.56vw;
+      }
+
+      @media (max-width: 720px) {
+        margin: 0 auto;
+      }
+
+      @media (max-width: 389px) {
+        margin: auto;
+      }
+
+      &_left {
+        font: 500 14px/21px $font-family-inter;
+        letter-spacing: -0.02em;
+        text-align: left;
+        color: #FFFFFF;
+        max-width: 285px;
+        align-self: flex-end;
+        margin: 0;
+        flex: 1 1 50%;
+      }
+
+      &_right {
+        font: 500 16px/24px $font-family-inter;
+        text-align: left;
+        color: #FFFFFF;
+        max-width: 285px;
+        align-self: flex-start;
+        margin: 0;
+        flex: 1 1 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .section-new-year-2023-8 {
+    padding: 10px 10px 0;
+
+    .section-8 {
+      &__description {
+        align-items: top;
+        width: 100%;
+        flex-grow: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .section-new-year-2023-8 {
+
+    .section-8 {
+      &__background {
+        top: 0;
+        left: -100%;
+        background: center/cover no-repeat #0000004D url("https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide8/new-year-2023-promo-slide8-mob-bg.webp");
+        transition:
+          left 0.3s,
+          width 0.3s,
+          height 0.3s;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &__header {
+        margin-bottom: 82px;
+
+        @media (max-width: 389px) {
+          margin-bottom: 42px;
+        }
+      }
+    }
+  }
+}

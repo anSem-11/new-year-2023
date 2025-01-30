@@ -1,0 +1,90 @@
+<section class="section-new-year-2023-1">
+  <section *fxRestriction="{disabledRegulators: [Regulators.FSCM, Regulators.KNN, Regulators.Global]}"
+           class="standalone-rw">
+    <div class="fx-warning bar-rates">
+      <div class="rw-row">
+        <div class="fx-warning__content-wrapper d-flex justify-content-between align-items-center sequence-0-150">
+          <div class="title-holder">
+            <div class="title-rates">
+              <div class="state-descr rates-ticker-unaccepted">
+                <img *fxRestriction="{ complexRestriction: {enabledCountries: ['AT'], enabledRegulators: [Regulators.FCA]}}"
+                     class="icon-info"
+                     alt="Austria Warning Icon"
+                     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+CiAgICA8cGF0aCBmaWxsPSIjRUU2NjE4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDBoMzB2MzBIMFYweiIvPgogICAgPHBhdGggZmlsbD0iI0ZGRiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMjkuMDA5IDI2Ljk5NmwtMjguMDEtLjA3M0wxNS4wNjggMy4wMDFsMTMuOTQxIDIzLjk5NXoiLz4KICAgIDxwYXRoIGZpbGw9IiNFRTY2MTgiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE2LjU2NCA5LjY0YTIuMjY1IDIuMjY1IDAgMCAwLTEuNjAzLS42MzggMi4yNCAyLjI0IDAgMCAwLTEuNjA0LjYzOGMtLjQ0NC40MjYtLjY2Ny45MzktLjY2NyAxLjUzOSAwIC4yOTcuMDYzLjc0LjE4OCAxLjMyOS4xMjQuNTg5LjI2MSAxLjE5Mi40MDkgMS44MDguMTY0LjY3MS4zNTEgMS41MDIuNTYyIDIuNDkzLjIxMS45OS40MzMgMi4yMzEuNjY3IDMuNzIxaC45MDFjLjIzNC0xLjQ3NC40NTctMi43MTMuNjY3LTMuNzE2LjIxMS0xLjAwMi4zOTgtMS44MzkuNTYyLTIuNTEuMTcxLS43MS4zMTQtMS4zMjguNDI3LTEuODU1LjExMy0uNTI3LjE3LS45NS4xNy0xLjI3IDAtLjYtLjIyNy0xLjExMy0uNjc5LTEuNTM5em0tLjAxOCAxMi45MzJhMi4xOTMgMi4xOTMgMCAwIDAtMS41NzQtLjY0OWMtLjYwOCAwLTEuMTM3LjIxNi0xLjU4NS42NDktLjQ0OS40MzMtLjY3My45NDctLjY3MyAxLjUzOSAwIC41OTMuMjI0IDEuMTAyLjY3MyAxLjUyOC40NDguNDI1Ljk3Ny42MzcgMS41ODUuNjM3LjYwMSAwIDEuMTI2LS4yMTIgMS41NzQtLjYzNy40NDktLjQyNi42NzMtLjkzNS42NzMtMS41MjggMC0uNTkyLS4yMjQtMS4xMDYtLjY3My0xLjUzOXoiLz4KPC9zdmc+Cg==">
+                <div>
+                  <span>
+                    <strong class="title-rates-mobile d-md-none"
+                            *fxRestriction="{ disabledRegulators: [Regulators.FCA] }">
+                      <ng-container>
+                        {{ 'ratest_ticker_investResponsibly' | translate }}
+                      </ng-container>
+                    </strong>
+                    <span fxTranslate="riskWarning_japaneseDescription"
+                          class="animated fx-animation-showUpOpacity animationDelay450mSec"
+                          *fxRestriction="{ complexRestriction: {enabledCountries: ['JP'], enabledLanguages: ['ja']}}"></span>
+                  </span>
+                  <span fxTranslate="riskWarning_brazilianDescription"
+                        class="animated fx-animation-showUpOpacity animationDelay450mSec"
+                        *fxRestriction="{ complexRestriction: {enabledCountries: ['BR'], enabledLanguages: ['pt']}}"></span>
+
+                  <ng-container>
+                    <ng-container>
+                      <strong class="d-none d-md-inline">
+                        {{ 'ratest_ticker_investResponsibly' | translate }}
+                      </strong>
+
+                      <span *fxRestriction="{ enabledRegulators: [Regulators.CySec] }"
+                            [fxTranslate]="'rates_ticker_descr'"
+                            [fxConstantsConfig]="{regulator: Regulators.CySec}"
+                            class="animated fx-animation-showUpOpacity animationDelay450mSec"></span>
+
+                      <span *fxRestriction="{ enabledRegulators: [Regulators.FCA] }"
+                            [fxTranslate]="'rates_ticker_descr_fca'"
+                            [fxConstantsConfig]="{regulator: Regulators.FCA}"
+                            class="animated fx-animation-showUpOpacity animationDelay450mSec"></span>
+
+                      <span *fxRestriction="{ enabledRegulators: [ Regulators.KNN] }"
+                            [fxTranslate]="'rates_ticker_descr'"
+                            class="animated fx-animation-showUpOpacity animationDelay450mSec"></span>
+                    </ng-container>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="background">
+    <canvas *ngIf="isDesktop"
+            id="new-year-2023-slide-1">
+    </canvas>
+    <div *ngIf="!isDesktop"
+         class="background__mobile">
+    </div>
+  </div>
+  <div class="content"
+       [ngClass]="{'padding': isPaddingAdded}">
+    <div class="logo-wrapper">
+      <a target="_blank"
+         mainWebsiteUrl>
+        <div [animateOnIntersection]="{'threshold': 0.3, 'class': 'animating'}"
+             class="logo"
+             [ngClass]="{'padding': isPaddingAdded}">
+        </div>
+      </a>
+    </div>
+    <div class="title"
+         [innerHTML]="'new_year_2023_text_1' | translate">
+    </div>
+    <div class="description-wrapper">
+      <div class="description"
+           [fxTranslate]="'new_year_2023_text_2'">
+      </div>
+      <div class="description"
+           [fxTranslate]="'new_year_2023_text_3'">
+      </div>
+    </div>
+  </div>
+</section>

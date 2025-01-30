@@ -1,0 +1,223 @@
+@import "fx-utilities";
+
+::ng-deep {
+  .swiper-slide.slide.swiper-slide-active {
+    .section-new-year-2023-4 {
+      .section-4__blocks {
+        .section-4__block {
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+}
+
+.section-new-year-2023-4 {
+  position: relative;
+  height: 100dvh;
+  width: 100vw;
+  background: #F4F4F3;
+
+  .background {
+    position: absolute;
+    z-index: 0;
+    background: center/cover no-repeat url("https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide4/mt4-bg.svg");
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-4 {
+    &__content {
+      padding: 40px 40px 85px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      @media (max-width: 720px) {
+        padding: 10px 10px 30px;
+      }
+
+      @media (max-width: 389px) {
+        padding: 10px;
+      }
+    }
+
+    &__blocks {
+      margin: auto;
+      padding: 10px 0;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      max-width: 895px;
+
+      @media (max-width: 640px) {
+        flex-direction: column;
+      }
+
+      @media (max-width: 420px) {
+        gap: 5px;
+      }
+    }
+
+    &__block {
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.90);
+      flex: 1 1 50%;
+      border: 0.5px solid #DFDFDF;
+      box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.10);
+      backdrop-filter: blur(7.5px);
+
+      @media (max-width: 780px) {
+        padding: 20px;
+      }
+
+      @media (max-width: 640px) {
+        flex: unset;
+      }
+
+      @media (max-width: 389px) {
+        padding: 10px;
+        min-height: 79px;
+      }
+
+      &_1 {
+        transition: transform 0.5s;
+        transform: translate(-100px, 200px);
+
+        @media (max-width: 640px) {
+          transform: translate(-30px, 0);
+        }
+      }
+
+      &_2 {
+        transition: transform 0.9s;
+        transform: translate(-100px, 250px);
+
+        @media (max-width: 640px) {
+          transform: translate(-80px, 0);
+        }
+      }
+
+      &_3 {
+        transition: transform 1.2s;
+        transform: translate(-100px, 300px);
+
+        @media (max-width: 640px) {
+          transform: translate(-150px, 0);
+        }
+      }
+
+      .title {
+        margin: 0 0 20px;
+        color: #E0A12A;
+        font: 700 25px/100% $font-family-inter;
+        letter-spacing: -0.75px;
+
+        @media (max-width: 720px) {
+          margin: 0 0 10px;
+        }
+
+        @media (max-width: 389px) {
+          font: 700 16px/100% $font-family-inter;
+          letter-spacing: -0.48px;
+        }
+      }
+
+      .descr {
+        color: #000;
+        font: 500 14px/150% $font-family-inter;
+        letter-spacing: -0.28px;
+
+        @media (max-width: 389px) {
+          font: 500 12px/150% $font-family-inter;
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+
+    &__description {
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      gap: 2.1vw;
+      width: 100%;
+      font: 500 14px/150% $font-family-inter;
+      letter-spacing: -0.28px;
+      color: #000;
+
+      @media (max-width: 1024px) {
+        gap: 3.56vw;
+      }
+
+      @media (max-width: 720px) {
+        font: 500 14px/150% $font-family-inter;
+      }
+
+      @media (max-width: 389px) {
+        font: 500 12px/150% $font-family-inter;
+      }
+
+      &_left {
+        flex: 1 1 50%;
+        max-width: 386px;
+        text-align: right;
+
+        :host-context([lang="ar"]) & {
+          text-align: left;
+        }
+      }
+
+      &_right {
+        margin: 42px 0 0;
+        flex: 1 1 50%;
+        max-width: 386px;
+
+        @media (max-width: 720px) {
+          margin: 20px 0 0;
+        }
+
+        @media (max-width: 389px) {
+          margin: 12px 0 0;
+        }
+      }
+    }
+
+
+    &__header {
+      margin: 0 auto;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__title {
+      margin: 0;
+      font: 600 40px/100% $font-family-inter;
+      letter-spacing: -1.2px;
+      text-align: left;
+      max-width: 285px;
+      color: #000;
+
+      @media (max-width: 720px) {
+        max-width: 250px;
+      }
+
+      @media (max-width: 389px) {
+        max-width: 200px;
+        font: 600 25px/100% $font-family-inter;
+      }
+    }
+
+    &__logo {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

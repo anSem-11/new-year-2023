@@ -1,0 +1,96 @@
+@import "fx-utilities";
+@import "swiper/dist/css/swiper.min.css";
+
+::ng-deep {
+  section {
+    padding: 0;
+  }
+
+  footer .footer-section {
+    padding: 20px 0 40px;
+  }
+}
+
+.swiper-container {
+  height: 100dvh;
+  color: #2B2F31;
+
+  .swiper-slide {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-active {
+      opacity: 1 !important;
+    }
+  }
+}
+
+.lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    opacity: 0.3;
+    background-color: #C5C5C5;
+
+
+    &:first-child {
+      left: 40px;
+
+      @media (max-width: 720px) {
+        left: 10px;
+      }
+    }
+
+    &:nth-child(2) {
+      left: 35%;
+
+      @media (max-width: 1024px) {
+        left: 19.375%;
+      }
+    }
+
+    &:nth-child(3) {
+      left: 49%;
+
+      @media (max-width: 1024px) {
+        left: 48%;
+      }
+    }
+
+    &:nth-child(4) {
+      left: 51%;
+
+      @media (max-width: 1024px) {
+        left: 51.56%;
+      }
+    }
+
+    &:nth-child(5) {
+      left: 65%;
+
+      @media (max-width: 1024px) {
+        left: 80%;
+      }
+    }
+
+    &:last-child {
+      right: 40px;
+
+      @media (max-width: 720px) {
+        right: 10px;
+      }
+    }
+  }
+}

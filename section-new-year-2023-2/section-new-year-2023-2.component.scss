@@ -1,0 +1,317 @@
+@import "fx-utilities";
+
+::ng-deep {
+  .swiper-slide.slide.swiper-slide-active {
+    .section-new-year-2023-2 {
+      .background {
+        margin: 0 0 0 -40px;
+        width: 100%;
+        height: 96%;
+
+        @media (min-width: 1500px) {
+          height: 100%;
+        }
+
+        @media (min-width: 2000px) {
+          height: 100%;
+        }
+
+        @media (max-width: 720px) {
+          margin: 0;
+        }
+      }
+
+      .section-2__logo {
+        animation: 0.3s 1 logo-animation;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.section-new-year-2023-2 {
+  padding: 40px 40px 156px;
+  position: relative;
+  height: 100dvh;
+  width: 100vw;
+  background: #FFF;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    padding: 40px 40px 20px;
+  }
+
+  @media (max-width: 720px) {
+    padding: 10px 10px 0;
+  }
+
+  .background {
+    margin: 0 0 0 -200px;
+    position: absolute;
+    width: 20%;
+    height: 70%;
+    background: center/contain no-repeat url("https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide2/zigzags.webp");
+    transition:
+      margin 0.3s,
+      width 0.3s,
+      height 0.3s;
+
+    @media (max-width: 1024px) {
+      background: center/cover no-repeat url("https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide2/zigzags.webp");
+    }
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+
+    @media (max-width: 1024px) {
+      padding: 0 0 60px;
+    }
+
+    @media (max-width:389px) {
+      padding: 0 0 20px;
+    }
+  }
+
+  .section-2 {
+    &__header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    &__title {
+      margin: 0;
+      font: 600 40px/100% $font-family-inter;
+      letter-spacing: -1.2px;
+      text-align: left;
+      max-width: 334px;
+      color: #000;
+
+      @media (max-width: 720px) {
+        max-width: 249px;
+      }
+
+      @media (max-width: 389px) {
+        font: 600 25px/100% $font-family-inter;
+        max-width: 150px;
+      }
+    }
+
+    &__logo {
+      width: 50px;
+      height: 50px;
+      opacity: 0;
+      transition:
+        transform 0.3s,
+        opacity 0.3s;
+    }
+
+    &__description {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 2.1vw;
+      width: 100%;
+      font: 500 14px/150% $font-family-inter;
+      letter-spacing: -0.28px;
+      color: #000;
+
+      @media (max-width: 1024px) {
+        gap: 3.56vw;
+      }
+
+      @media (max-width: 720px) {
+        font: 500 14px/150% $font-family-inter;
+      }
+
+      @media (max-width: 389px) {
+        font: 500 12px/150% $font-family-inter;
+      }
+
+      &_left {
+        flex: 1 1 50%;
+        max-width: 386px;
+        text-align: right;
+
+        :host-context([lang="ar"]) & {
+          text-align: left;
+        }
+      }
+
+      &_right {
+        margin: 42px 0 0;
+        flex: 1 1 50%;
+        max-width: 386px;
+
+        @media (max-width: 720px) {
+          margin: 110px 0 0;
+        }
+
+        @media (max-width: 389px) {
+          margin: 48px 0 0;
+        }
+      }
+    }
+
+    &__awards {
+      margin: auto;
+      padding: 10px 0;
+      display: grid;
+      grid-template: "a b c d e f g" auto / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 60px;
+      max-width: 945px;
+
+      @media (min-width: 1500px) {
+        gap: 80px;
+        max-width: 1280px;
+      }
+
+      @media (min-width: 2000px) {
+        gap: 100px;
+        max-width: 1680px;
+      }
+
+      @media (max-width: 1024px) {
+        place-items: center;
+        gap: 20px 28px;
+        grid-template:
+          "a b c" auto
+          "e d f" auto
+          ". g ." auto / 1fr 1fr 1fr;
+      }
+
+      @media (max-width: 560px) {
+        padding: 42px 0 10px;
+        gap: 0 28px;
+      }
+
+      @media (max-width: 370px) {
+        padding: 22px 0 10px;
+        gap: 0 6px;
+      }
+    }
+
+    &__award {
+
+      @media (min-width: 1500px) {
+        transform: scale(1.2);
+      }
+
+      @media (min-width: 2000px) {
+        transform: scale(1.3);
+      }
+
+      &_1 {
+        margin: 88px 0 0;
+        grid-area: a;
+        width: 68px;
+        height: 70px;
+        background: center / contain no-repeat url('https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide2/award-i-1.webp');
+
+        @media (max-width: 1024px) {
+          margin: 0;
+        }
+      }
+
+      &_2 {
+        margin: 150px 0 0;
+        width: 92px;
+        height: 70px;
+        background: center / contain no-repeat url('https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide2/award-i-2.webp');
+        grid-area: b;
+
+        @media (max-width: 1024px) {
+          margin: 28px 0 0;
+        }
+      }
+
+      &_3 {
+        margin: 80px 0 0;
+        grid-area: c;
+        width: 64px;
+        height: 70px;
+        background: center / contain no-repeat url('https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide2/award-i-3.webp');
+
+        @media (max-width: 1024px) {
+          margin: 0;
+        }
+      }
+
+      &_4 {
+        margin: 44px 0 0;
+        grid-area: d;
+        width: 124px;
+        height: 70px;
+        background: center / contain no-repeat url('https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide2/award-i-4.webp');
+
+        @media (max-width: 1024px) {
+          margin: 28px 0 0;
+        }
+
+        @media (min-width: 1500px) {
+          margin: 24px 0 0;
+        }
+      }
+
+      &_5 {
+        margin: 88px 0 0;
+        grid-area: e;
+        width: 75px;
+        height: 70px;
+        background: center / contain no-repeat url('https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide2/award-i-5.webp');
+
+        @media (max-width: 1024px) {
+          margin: 0;
+        }
+      }
+
+      &_6 {
+        margin: 44px 0 0;
+        grid-area: f;
+        width: 90px;
+        height: 70px;
+        background: center / contain no-repeat url('https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide2/award-i-6.webp');
+
+        @media (max-width: 1024px) {
+          margin: 0;
+        }
+      }
+
+      &_7 {
+        grid-area: g;
+        width: 68px;
+        height: 70px;
+        background: center / contain no-repeat url('https://direct-landings.azureedge.net/assets/img/pages/new-year-2023/slide2/award-i-7.webp');
+
+        @media (max-width: 1024px) {
+          margin: 30px 0 0;
+        }
+
+        @media (max-width: 370px) {
+          margin: 12px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes logo-animation {
+  from {
+    opacity: 0;
+    transform: translate(-500px, 100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

@@ -1,0 +1,144 @@
+@import "fx-utilities";
+
+::ng-deep {
+  .swiper-slide.slide.swiper-slide-active {
+    .section-new-year-2023-7 {
+      .background {
+        transform: translate(-50%, -50%) scale(1) !important;
+      }
+    }
+  }
+}
+
+.section-new-year-2023-7 {
+  height: 100dvh;
+  width: 100vw;
+  background: #000;
+
+  .section-7 {
+    &__content {
+      position: relative;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      @media (max-width: 1024px) {
+        padding: 40px;
+      }
+
+      @media (max-width: 720px) {
+        padding: 10px 10px 74px;
+      }
+
+      @media (max-width: 389px) {
+        padding: 10px;
+      }
+
+      .background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.4);
+        transition: transform 0.5s;
+        z-index: 0;
+        width: 100%;
+        max-width: 896px;
+        max-height: 100%;
+
+        @media (min-width: 1320px) {
+          max-width: 1000px;
+        }
+
+        @media (min-width: 1500px) {
+          max-width: 1200px;
+        }
+
+        &__image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &__description {
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      gap: 2.1vw;
+      width: 100%;
+      font: 500 14px/150% $font-family-inter;
+      letter-spacing: -0.28px;
+      color: #FFF;
+
+      @media (max-width: 1024px) {
+        gap: 3.56vw;
+      }
+
+      @media (max-width: 720px) {
+        width: 96%;
+      }
+
+      @media (max-width: 389px) {
+        width: 100%;
+        font: 500 12px/150% $font-family-inter;
+      }
+
+      &_left {
+        flex: 1 1 50%;
+        max-width: 386px;
+        text-align: right;
+
+        :host-context([lang="ar"]) & {
+          text-align: left;
+        }
+      }
+
+      &_right {
+        margin: 42px 0 0;
+        flex: 1 1 50%;
+        max-width: 386px;
+
+        @media (max-width: 720px) {
+          margin: 12px 0 0;
+        }
+      }
+    }
+
+
+    &__header {
+      margin: 0 auto;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__title {
+      margin: 0;
+      font: 600 40px/100% $font-family-inter;
+      letter-spacing: -1.2px;
+      text-align: left;
+      max-width: 285px;
+      color: #FFF;
+
+      @media (max-width: 720px) {
+        max-width: 250px;
+      }
+
+      @media (max-width: 389px) {
+        font: 600 25px/100% $font-family-inter;
+        max-width: 200px;
+      }
+    }
+
+    &__logo {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
